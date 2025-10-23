@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+body {
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: rgb(44, 43, 43);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Nav Bar */
+
+.navbar {
+  width: 90.2%;
+  height: 98vh;
+  border-radius: 15px;
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  margin-left: 7px;
+  background-image: url(./assetss/Adv\ 750.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80% 90%;
+  background-color: black;
+}
+
+#goShop {
+  border: 1px solid white;
+  display: flex;
+  height: 40px;
+  width: 93%;
+  border-radius: 20px;
+  background-color: white;
+  color: black;
+  align-items: center;
+  padding: 0px 2px 0px 2px;
+  justify-content: space-between;
+  word-spacing: 5px;
+}
+
+#goShopButton {
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+  transition: all ease-in 2s;
+}
+
+
+.navContent {
+  border: 1px solid rgba(255, 255, 255, 0.149);
+  width: 24%;
+  height: 33%;
+  position: absolute;
+  bottom: 10px;
+  left: 13px;
+  border-radius: 15px;
+  background-color: black;
+  color: white;
+  padding: 0px 0px 0px 25px;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgb(0, 0, 0);
+  backdrop-filter: blur(6.2px);
+  -webkit-backdrop-filter: blur(6.2px);
+}
+
+.navIcons {
+  width: 8%;
+  height: 98vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 15px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+a {
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  display: flex;
+  transition: all ease 0.3s;
+}
+
+a:hover {
+  color: black;
+  background-color: white;
+  transform: scale(1.1);
+}
+
+.navAside {
+  width: 17%;
+  height: 93%;
+  position: absolute;
+  right: 20px;
+  bottom: 23px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#aside1,
+#aside2 {
+  width: 100%;
+  height: 48%;
+  border: 1px solid rgb(53, 52, 52);
+  border-radius: 15px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgb(0, 0, 0);
+  backdrop-filter: blur(6.2px);
+  -webkit-backdrop-filter: blur(6.2px);
+}
+
+#Transmission {
+  width: 100%;
+}
+
+#transmissionCnt {
+  width: 70%;
+  height: 20%;
+  text-align: center;
+}
+
+#logoCtn {
+  position: absolute;
+  bottom: 40px;
+  font-family: "Dancing Script", cursive;
+  font-size: 25px;
+}
+
+#Logo {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+/* Middle Body */
+
+section {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 55px;
+}
+
+h2 {
+  display: inline-block;
+  text-align: center;
+  color: white;
+}
+
+#bodyCtn {
+  color: rgba(255, 255, 255, 0.43);
+  margin-top: -10px;
+}
+
+.middleButtons {
+  height: 40vh;
+  margin: 50px;
+  width: 75%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#firstBtn,
+#secondBtn,
+#thirdBtn {
+  width: 290px;
+  border-radius: 30px;
+  height: 250px;
+  border: 0px;
+  box-shadow: -1px 2px 39px 2px rgba(0,0,0,0.75);
+  background-color: rgba(0, 0, 0, 0.53);
+  transition: all ease 0.3s;
+}
+
+#firstBtn:hover,
+#secondBtn:hover,
+#thirdBtn:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  content: 'Show More';
+}
+
+img { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#decSpan {
+  width: 50%;
+  right: 0px;
+  height: 70vh;
+  z-index: -2;
+  background-color: rgba(255, 255, 255, 0.278);
+  border-radius: 15px 0px 0px 15px;
+  position: absolute;
+  margin-bottom: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.523);
+  margin-top: 35px;
+}
+
+#section2 {
+  width: 100%;
+  height: 160vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#BoxAcc,
+#GiviAcc,
+#ExhaustAcc {
+  width: 60%;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  color: white;
+  justify-content: space-around;
+}
+
+#BoxAcc {
+  margin-left: -400px;
+}
+
+#GiviAcc {
+  margin-left: 500px;
+}
+
+#ExhaustAcc {
+  margin-left: -220px;
+}
+
+#ExhaustAcc img {
+  filter: drop-shadow(5px 5px 80px #999797a0);
+  cursor: pointer;
+}
+
+#GiviAcc img {
+  filter: drop-shadow(5px 5px 80px #999797a0);
+  cursor: pointer;
+}
+
+#BoxAcc img {
+  filter: drop-shadow(5px 5px 80px #999797a0);
+  cursor: pointer;
+}
+
+#aboutSection {
+  width: 80%;
+  height: 70vh;
+  margin: 200px auto;
+  border-radius: 0px;
+}
+
+#aboutBoxes {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#FindDealer,
+#DownloadBrochure,
+#ConfigureYourXADV {
+  width: 30%;
+  height: 400px;
+  display: flex;
+  border: 1px solid rgba(255, 255, 255, 0.174);
+  align-items: center;
+  border-radius: 15px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+picture {
+  width: 250px;
+  height: 230px;
+  margin-top: -150px;
+}
+
+picture img {
+  width: 250px;
+  height: 230px;
+  cursor: pointer;
+  transition: all ease ;
+}
+
+picture img:hover {
+  transform: scale(1.1);
+  transition: all ease 0.3s;
+}
+
+#aboutSection p {
+  color: white;
+  width: 90%;
+}
+
+
