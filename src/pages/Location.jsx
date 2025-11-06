@@ -9,12 +9,25 @@ function Location() {
   return (
     <div id='locationCtn'>
       <h1 style={{margin: '20px auto'}}>We're global to privilege you</h1>
-      <span id='dots1'></span>
+      <select id='locationSelect'>
+        <option value="newyork">New York</option>
+        <option value="london">London</option>
+        <option value="paris">Paris</option>
+        <option value="tokyo">Tokyo</option>
+        <option value="sydney">Sydney</option>
+      </select>
+      <button id='searchLocation'>See Location</button>
+      <span id='dots1'>
+        <div id='Paris'>
+          <p>Paris</p>
+        </div>
+      </span>
       <span id='dots2'></span>
       <span id='dots3'></span>
       <span id='dots4'></span>
       <span id='dots5'></span>
       <span id='dots6'></span>
+      <span id='dots7'></span>
       <img src={LocationImg} alt="Location" id='locationImg'/>
       <div id='locationInf'>
         <div className="box1">
