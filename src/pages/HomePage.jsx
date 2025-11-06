@@ -10,20 +10,18 @@ import Front from '../assetss/front.png';
 import BoxAcc from '../assetss/Box.png';
 import Givi from '../assetss/Givi.png';
 import Exhachus from '../assetss/Exchaust.png'; 
-import Location from '../assetss/locat.png';
-import Settings from '../assetss/setting.png';
-import Brochure from '../assetss/brch.png';
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
   return (
     <div className='home-page'>
         <nav className='navIcons'>
-            <a href='/user'>
+            <Link to="/user">
                 <FaUser  size={"23px"}/>
-            </a>
-            <a href='/location'>
+            </Link>
+            <Link to="/location">
                 <IoLocationSharp size={'29px'} />
-            </a>
+            </Link>
             <a href='/shopping'>
                 <FaShoppingCart size={'25px'} />
             </a>
@@ -84,31 +82,6 @@ const HomePage = () => {
                 <h1>Exhaust SC-Project</h1>
                 <p>SC-Project exhaust system for a sportier sound and improved performance.</p>
                 </span>
-            </div>
-        </section>
-        <section id="aboutSection">
-            <div id='aboutBoxes'>
-                <div id="FindDealer">
-                    <picture>
-                        <img src={Location} />
-                    </picture>
-                    <h2>Find a Dealer</h2>
-                    <p>Locate your nearest Honda dealer to explore the X-ADV 750cc in person. Our knowledgeable staff are ready to assist you with any questions and provide expert advice.</p>
-                </div>
-                <div id="DownloadBrochure">
-                    <picture>
-                        <img src={Brochure} />
-                    </picture>
-                    <h2>Download Brochure</h2>
-                    <p>Get detailed information about the Honda X-ADV 750cc by downloading our comprehensive brochure. Discover all the features, specifications, and options available.</p>
-                </div>
-                <div id="ConfigureYourXADV">
-                    <picture>
-                        <img src={Settings} />
-                    </picture>
-                    <h2>Configure Your X-ADV</h2>
-                    <p>Customize your Honda X-ADV 750cc to suit your style and preferences. Choose from a range of colors, accessories, and packages to create your perfect adventure scooter.</p>
-                </div>
             </div>
         </section>
         <footer>
