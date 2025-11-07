@@ -6,6 +6,9 @@ import { BsShop } from "react-icons/bs";
 
 
 function Location() {
+
+
+
   return (
     <div id='locationCtn'>
       <h1 style={{margin: '20px auto'}}>We're global to privilege you</h1>
@@ -15,19 +18,38 @@ function Location() {
         <option value="paris">Paris</option>
         <option value="tokyo">Tokyo</option>
         <option value="sydney">Sydney</option>
+        <option value="skopje">Skopje</option>
+        <option value="berlin">Berlin</option>
       </select>
       <button id='searchLocation'>See Location</button>
-      <span id='dots1'>
-        <div id='Paris'>
+      <span id='dots1'></span>
+        <div style={{position: 'absolute', top: '18%', right: '25.6%'}} id='Paris'>
           <p>Paris</p>
         </div>
-      </span>
       <span id='dots2'></span>
+        <div style={{position: 'absolute', top: '21%', right: '36.6%'}} id='NewYork'>
+          <p>New York</p>
+        </div>
       <span id='dots3'></span>
+        <div style={{position: 'absolute', top: '30.9%', left: '44.6%'}} id='London'>
+          <p>London</p>
+        </div>
       <span id='dots4'></span>
+        <div style={{position: 'absolute', top: '20.8%', left: '23.1%'}} id='Tokyo'>
+          <p>Tokyo</p>
+        </div>
       <span id='dots5'></span>
+        <div style={{position: 'absolute', top: '40%', left: '31.1%'}} id='Sydney'>
+          <p>Sydney</p>
+        </div>
       <span id='dots6'></span>
+        <div style={{position: 'absolute', top: '41%', right: '41.6%'}} id='Skopje'>
+          <p>Skopje</p>
+        </div>
       <span id='dots7'></span>
+        <div style={{position: 'absolute', top: '45.7%', right: '18.6%'}} id='Berlin'>
+          <p>Berlin</p>
+        </div>
       <img src={LocationImg} alt="Location" id='locationImg'/>
       <div id='locationInf'>
         <div className="box1">

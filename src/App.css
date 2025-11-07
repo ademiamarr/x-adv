@@ -343,7 +343,7 @@ form {
   height: 10vh;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .socialBtn {
@@ -357,14 +357,18 @@ form {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all ease 0.3s;
-  border: 1px solid rgba(0, 0, 0, 0.238);
   margin-top: 25px;
+  transition: all ease 0.3s;
+}
+
+.socialBtn:hover {
+  transform: scale(1.1);
+  transition: all ease 0.3s;
 }
 
 #appleBtn img {
   width: 60%;
-  height: 65%;
+  height: 70%;
 }
 
 #facebookBtn img {
@@ -442,6 +446,7 @@ form {
   border: 4px solid rgb(193, 188, 188);
   position: absolute;
   top: 29%;
+  cursor: pointer;
   right: 30%;
   z-index: 1;
 }
@@ -456,6 +461,7 @@ form {
   top: 32%;
   right: 41%;
   z-index: 1;
+  cursor: pointer;
 }
 
 #dots3 {
@@ -468,6 +474,7 @@ form {
   top: 42%;
   right: 50%;
   z-index: 1;
+  cursor: pointer;
 }
 
 #dots4 {
@@ -480,6 +487,7 @@ form {
   top: 32%;
   left: 27%;
   z-index: 1;
+  cursor: pointer;
 }
 
 #dots5 {
@@ -492,6 +500,7 @@ form {
   top: 51%;
   left: 35%;
   z-index: 1;
+  cursor: pointer;
 }
 
 #dots6 {
@@ -504,6 +513,7 @@ form {
   top: 52%;
   right: 46%;
   z-index: 1;
+  cursor: pointer;
 }
 
 #dots7 {
@@ -516,6 +526,7 @@ form {
   top: 57%;
   right: 23%;
   z-index: 1;
+  cursor: pointer;
 }
 
 #locationSelect {
@@ -544,7 +555,13 @@ form {
   z-index: 1;
 }
 
-#Paris {
+#Paris,
+#NewYork,
+#London,
+#Tokyo,
+#Berlin,
+#Skopje,
+#Sydney {
   clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 56% 75%, 48% 100%, 38% 74%, 0% 75%);
   background-color: rgba(0, 0, 0, 0.797);
   width: 150px;
@@ -552,6 +569,18 @@ form {
   display: flex;
   justify-content: center;
   color: white;
-  border-radius: 10px 10px 10px 10px;
-  
+  position: absolute;
+  z-index: 2;
+  display: none;
+}
+
+
+#dots1:hover + #Paris,
+#dots2:hover + #NewYork,
+#dots3:hover + #London,
+#dots4:hover + #Tokyo,
+#dots5:hover + #Sydney,
+#dots6:hover + #Skopje,
+#dots7:hover + #Berlin {
+  display: flex;
 }
