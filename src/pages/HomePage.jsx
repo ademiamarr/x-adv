@@ -10,6 +10,7 @@ import Front from '../assetss/front.png';
 import BoxAcc from '../assetss/Box.png';
 import Givi from '../assetss/Givi.png';
 import Exhachus from '../assetss/Exchaust.png'; 
+import { FaShop } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 
 const HomePage = () => {
@@ -22,11 +23,11 @@ const HomePage = () => {
             <Link to="/location">
                 <IoLocationSharp size={'29px'} />
             </Link>
-            <a href='/shopping'>
+            <Link to='/cart'>
                 <FaShoppingCart size={'25px'} />
-            </a>
+            </Link>
             <a href='/settings'>
-                <IoMdSettings size={'28px'} />
+                <FaShop size={'28px'} />
             </a>
         </nav>
         <nav className='navbar'>
