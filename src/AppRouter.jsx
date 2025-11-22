@@ -4,7 +4,6 @@ import HomePage from './pages/HomePage';
 import ProductListPage from './pages/ProductListPage';
 import ProductDetailPage from './pages/ProductDetailPage';
 import CartPage from './pages/CartPage';
-import CheckoutPage from './pages/CheckoutPage';
 import User from './pages/User';
 import Location from './pages/Location';
 
@@ -18,7 +17,6 @@ const AppRouter = () => {
         <Route path="/location" element={<Location />} />
         <Route path="/user" element={<User />} />
         <Route path="/cart" element={<CartPage />} />
-        <Route path="/checkout" element={<CheckoutPage />} />
       </Routes>
     </Router>
   );

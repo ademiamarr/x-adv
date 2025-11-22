@@ -1,7 +1,6 @@
 import { FaUser } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
 import { FaShoppingCart } from "react-icons/fa";
-import { IoMdSettings } from "react-icons/io";
 import Logo from '../assetss/logo2.png';
 import Transmission from '../assetss/transsmition.png';
 import Top from '../assetss/top.png';
@@ -26,7 +25,7 @@ const HomePage = () => {
             <Link to='/cart'>
                 <FaShoppingCart size={'25px'} />
             </Link>
-            <a href='/settings'>
+            <a href='/products'>
                 <FaShop size={'28px'} />
             </a>
         </nav>
