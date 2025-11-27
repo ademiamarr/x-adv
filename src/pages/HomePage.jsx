@@ -11,25 +11,51 @@ import Givi from '../assetss/Givi.png';
 import Exhachus from '../assetss/Exchaust.png'; 
 import { FaShop } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
+import Footer from './Footer';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import advNav from '../assetss/Adv 750.jpg';
+
+gsap.registerPlugin(useGSAP);
+
+
 
 const HomePage = () => {
+
+
+useGSAP(() => {
+  gsap.from('.user','.location', {
+    x: -300,
+    ease: 'power4.in',
+    duration: 1,
+  },
+    gsap.from('.navAdv', {
+        duration: 1,
+        ease: "back.in(1.5)",
+        scale: 0.2
+  })
+)
+})
+
+
   return (
     <div className='home-page'>
         <nav className='navIcons'>
-            <Link to="/user">
+            <Link className="user" to="/user">
                 <FaUser  size={"23px"}/>
             </Link>
-            <Link to="/location">
+            <Link to="/location" className="location">
                 <IoLocationSharp size={'29px'} />
             </Link>
             <Link to='/cart'>
-                <FaShoppingCart size={'25px'} />
+                <FaShoppingCart size={'25px'} className="shopping" />
             </Link>
             <a href='/products'>
-                <FaShop size={'28px'} />
+                <FaShop size={'28px'} className="shop" />
             </a>
         </nav>
         <nav className='navbar'>
+            <img src={advNav} alt="Adv" className="navAdv"/>
         <nav className='navContent'>
             <h1>X-ADV 750cc</h1>
             <p>The Honda X-ADV is an adventure-styled scooter that blends the capabilities of an off-road motorcycle with the practicality of a maxi-scooter.</p>
@@ -84,9 +110,7 @@ const HomePage = () => {
                 </span>
             </div>
         </section>
-        <footer>
-            <p>&copy; 2024 Honda Motor Co., Ltd. All rights reserved.</p>
-        </footer>
+        <Footer />
     </div>
   );
 };

@@ -4,12 +4,15 @@ import adv2 from '../assetss/xadv2.png';
 import adv3 from '../assetss/adv3.png';
 import adv4 from '../assetss/adv4.png';
 
+
 const products = [
   { id: 1, name: 'Honda X-Adv 750', price: 19.000, image: adv1, cc: '750' },
   { id: 3, name: 'Honda X-Adv 450', price: 14.999, image: adv2, cc: '450' },
   { id: 2, name: 'Honda X-Adv 700', price: 17.999, image: adv3, cc: '700' },
   { id: 4, name: 'Honda X-Adv 350', price: 12.999, image: adv4, cc: '350' },
 ];
+
+
 
 const ProductListPage = () => {
   return (
