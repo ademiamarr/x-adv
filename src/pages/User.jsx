@@ -12,11 +12,11 @@ function user() {
                 <form>
                     <input id='email' type="email" placeholder='Email' required />
                     <input id='password' type="password" placeholder='Password' required />
-                    <p style={{cursor:"pointer", marginLeft: '55%'}}>Forgot Password</p>
+                    <p style={{cursor:"pointer", marginLeft: '55%', color: 'blue'}}>Forgot Password</p>
                     <button id='register' type="submit">Register</button>
                 </form>
                 <br />
-                <p>OR continue with</p>
+                <p style={{ color: 'black'}}>OR continue with</p>
                 <div id='socialBtns'>
                     <button className='socialBtn' id='googleBtn'><img src={Google} /></button>
                     <button className='socialBtn' id='facebookBtn'><img src={Facebook} />'</button>

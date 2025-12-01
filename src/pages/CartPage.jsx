@@ -41,7 +41,9 @@ const CartPage = () => {
   return (
     <div  className='CartPage'>
       <div className='shoppingBsk'>
-        <IoArrowBackOutline id='backIcon' />
+        <Link id='backIcon' to='/' aria-label='Back to home'>
+          <IoArrowBackOutline />
+        </Link>
         <h2 style={{marginTop: '-40px'}}>Shopping Cart</h2>
         <h2 style={{opacity: '0.2'}}>Basket Is Empty.</h2>
         <div id='subTotal'>

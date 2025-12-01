@@ -139,7 +139,7 @@ const HomePage = () => {
         <nav className='navbar'>
             <img src={advNav} alt="Adv" className="navAdv"/>
         <nav className='navContent'>
-            <h1>X-ADV 750cc</h1>
+            <h1>Honda X-ADV</h1>
             <p>The Honda X-ADV is an adventure-styled scooter that blends the capabilities of an off-road motorcycle with the practicality of a maxi-scooter.</p>
             <span id='goShop'>&nbsp;&nbsp;$14,950&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;Order Now<button id='goShopButton' onClick={scrollToSection2}>&#10230;</button></span>
         </nav>

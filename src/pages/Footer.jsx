@@ -25,6 +25,9 @@ function Footer() {
                     padding: "10px 20px",
                     borderRadius: "5px",
                     border: "none",
+                    backgroundColor: "#007BFF",
+                    cursor: "pointer",
+                    color: "white"
                 }}
                 >Subscribe</button>
                 </div>

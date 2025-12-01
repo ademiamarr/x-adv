@@ -3,6 +3,7 @@ import adv1 from '../assetss/adv1.png';
 import adv2 from '../assetss/xadv2.png';
 import adv3 from '../assetss/adv3.png';
 import adv4 from '../assetss/adv4.png';
+import { IoArrowBackOutline } from "react-icons/io5";
 import { Link } from 'react-router-dom';
 
 
@@ -18,8 +19,8 @@ const products = [
 const ProductListPage = () => {
   return (
     <div id="productlist-page">
-      <Link to="/HomePage.jsx">
-      <h2>&larr;</h2>
+      <Link id='backIcon' to='/' aria-label='Back to home'>
+        <IoArrowBackOutline />      
       </Link>
       <div
         className="product-list-container"
