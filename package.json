@@ -1,6 +1,6 @@
 {
-  "homepage": "https://ademiamar.github.io/x-adv",
-  "name": "xadv-app",
+  "homepage": "https://github.com/ademiamarr/x-adv.git",
+  "name": "x-adv",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
