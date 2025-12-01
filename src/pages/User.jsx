@@ -19,7 +19,7 @@ function user() {
                 <p style={{ color: 'black'}}>OR continue with</p>
                 <div id='socialBtns'>
                     <button className='socialBtn' id='googleBtn'><img src={Google} alt='Google' /></button>
-                    <button className='socialBtn' id='facebookBtn'><img src={Facebook} alt='Facebook' />'</button>
+                    <button className='socialBtn' id='facebookBtn'><img src={Facebook} alt='Facebook' /></button>
                     <button className='socialBtn' id='appleBtn'><img src={Apple} alt='Apple' /></button>
                 </div>
                 <br />
