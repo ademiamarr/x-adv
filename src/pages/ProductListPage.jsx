@@ -45,7 +45,7 @@ const ProductListPage = () => {
             }}
           >
             <img src={product.image} 
-            alt={product.name} 
+            alt='Product'
             style={{ 
               width: '46%',
               height: 440, 

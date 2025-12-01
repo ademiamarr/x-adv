@@ -18,9 +18,9 @@ function user() {
                 <br />
                 <p style={{ color: 'black'}}>OR continue with</p>
                 <div id='socialBtns'>
-                    <button className='socialBtn' id='googleBtn'><img src={Google} /></button>
-                    <button className='socialBtn' id='facebookBtn'><img src={Facebook} />'</button>
-                    <button className='socialBtn' id='appleBtn'><img src={Apple} /></button>
+                    <button className='socialBtn' id='googleBtn'><img src={Google} alt='Google' /></button>
+                    <button className='socialBtn' id='facebookBtn'><img src={Facebook} alt='Facebook' />'</button>
+                    <button className='socialBtn' id='appleBtn'><img src={Apple} alt='Apple' /></button>
                 </div>
                 <br />
                 <p>Don't have account?&nbsp; <strong style={{cursor: 'pointer'}}>Create Now</strong></p>
