@@ -65,6 +65,31 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/a
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
+## Deploying to GitHub Pages (project site)
+
+This project is set up to deploy to GitHub Pages using the `gh-pages` package.
+
+Steps to deploy:
+
+1. Make sure the repository on GitHub is public (or use a user/organization site).
+2. Confirm `homepage` in `package.json` is set to your GitHub Pages URL — for this repo it should be:
+
+	```json
+	"homepage": "https://ademiamar.github.io/x-adv"
+	```
+
+3. Install dependencies and build & deploy:
+
+```bash
+npm install
+npm run build
+npm run deploy
+```
+
+This runs `npm run build` and then publishes the `build` folder to the `gh-pages` branch. After a minute or two your site will be available at the `homepage` URL.
+
+If you've previously deployed and want to update the live site, just re-run `npm run deploy` after making changes and pushing commits.
+
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
