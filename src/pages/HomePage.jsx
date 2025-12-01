@@ -14,28 +14,110 @@ import { Link } from 'react-router-dom';
 import Footer from './Footer';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import advNav from '../assetss/Adv 750.jpg';
 
-gsap.registerPlugin(useGSAP);
 
+// register plugins we need (do not register react hook as plugin)
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 
 const HomePage = () => {
 
+    // GSAP context — animates UI when component mounts
+    useGSAP(() => {
+    let tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: '#section1',
+            scrub: true,
+            start: 'center 100%',
+            end: '40% center',
+            toggleActions: 'play play  none none'
+        }
+    }, []);
 
-useGSAP(() => {
-  gsap.from('.user','.location', {
-    x: -300,
-    ease: 'power4.in',
-    duration: 1,
-  },
+    tl.addLabel('#section1')
+    .fromTo('.middleButtons', {
+        y: 100,
+        opacity: 0,
+    }, {
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        scale: 1,
+        ease: 'power2.out'
+    })
+
+
+
+
+    gsap.from(['.user','.location','.shopping','.shop',], {
+        x: -300,
+        ease: 'backIn(2)',
+    })
+
+
     gsap.from('.navAdv', {
         duration: 1,
-        ease: "back.in(1.5)",
-        scale: 0.2
-  })
-)
-})
+        ease: "power2(2)",
+        scale: 0.8,
+        opacity: 0
+    })
+
+        // Section 2: smooth scrubbed reveal for each child
+        gsap.utils.toArray('#section2 > div').forEach((el, i) => {
+            gsap.fromTo(
+                el,
+                { y: 60, opacity: 0, scale: 0.98 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    scale: 1,
+                    duration: 0.8,
+                    ease: 'power2.out',
+                    scrollTrigger: {
+                        trigger: el,
+                        start: 'top 90%',
+                        end: 'top 40%',
+                        scrub: 0.8
+                    }
+                }
+            );
+        });
+
+        // Footer reveal: fade and lift each footer area as it scrolls into view
+        gsap.utils.toArray('#top-footer, #bottom-footer').forEach((el) => {
+            gsap.fromTo(
+                el,
+                { y: 40, opacity: 0, scale: 0.99 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    scale: 1,
+                    duration: 0.9,
+                    ease: 'power2.out',
+                    scrollTrigger: {
+                        trigger: el,
+                        start: 'top 95%',
+                        end: 'top 35%',
+                        scrub: 0.9,
+                    }
+                }
+            );
+        });
+
+    }, [])
+
+    // helper to smooth-scroll to section2 using ScrollToPlugin
+    const scrollToSection2 = () => {
+        try {
+            gsap.to(window, { duration: 1, scrollTo: '#section2', ease: 'power2.inOut' });
+        } catch (e) {
+            // if animation plugin not available, fallback to native scroll
+            document.querySelector('#section2')?.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
 
   return (
@@ -50,16 +132,16 @@ useGSAP(() => {
             <Link to='/cart'>
                 <FaShoppingCart size={'25px'} className="shopping" />
             </Link>
-            <a href='/products'>
+            <Link to='/products'>
                 <FaShop size={'28px'} className="shop" />
-            </a>
+            </Link>
         </nav>
         <nav className='navbar'>
             <img src={advNav} alt="Adv" className="navAdv"/>
         <nav className='navContent'>
             <h1>X-ADV 750cc</h1>
             <p>The Honda X-ADV is an adventure-styled scooter that blends the capabilities of an off-road motorcycle with the practicality of a maxi-scooter.</p>
-            <span id='goShop'>&nbsp;&nbsp;$14,950&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;Order Now<button id='goShopButton'>&#10230;</button></span>
+            <span id='goShop'>&nbsp;&nbsp;$14,950&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;Order Now<button id='goShopButton' onClick={scrollToSection2}>&#10230;</button></span>
         </nav>
         <nav className='navAside'>
             <span id='aside1'>

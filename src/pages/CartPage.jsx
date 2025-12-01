@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import MasterCard from '../assetss/mastercard.png';
 import Visa from '../assetss/visa.png';
+import { IoArrowBackOutline } from "react-icons/io5";
 
 const CartPage = () => {
   const [cardHolder, setCardHolder] = useState('');
@@ -38,13 +39,14 @@ const CartPage = () => {
   };
 
   return (
-    <div className='CartPage'>
+    <div  className='CartPage'>
       <div className='shoppingBsk'>
+        <IoArrowBackOutline id='backIcon' />
         <h2 style={{marginTop: '-40px'}}>Shopping Cart</h2>
         <h2 style={{opacity: '0.2'}}>Basket Is Empty.</h2>
         <div id='subTotal'>
           <Link id='linkSub' to='/products'>&larr; Continue Shopping</Link>
-          <p>Subtotal: $0.00</p>
+          <p style={{ color: 'black' }}>Subtotal: $0.00</p>
         </div>
       </div>
       <div className='Payment'>

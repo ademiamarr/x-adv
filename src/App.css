@@ -265,6 +265,11 @@ img {
   cursor: pointer;
 }
 
+#BoxAcc img {
+  filter: drop-shadow(5px 5px 80px #999797a0);
+  cursor: pointer;
+}
+
 
 /* Login Page */
 
@@ -600,6 +605,23 @@ form {
   background-color: rgb(208, 206, 206);
 }
 
+#backIcon {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 40px;
+  height: 40px;
+  color: black;
+  cursor: pointer;
+  transition: all ease 0.3s;
+  border-radius: 40%;
+}
+
+#backIcon:hover {
+  border: 1px solid black;
+  border-radius: 40%;
+}
+
 .shoppingBsk {
   width: 65%;
   height: 100%;
@@ -616,6 +638,7 @@ form {
   align-items: center;
   justify-content: space-between;
   padding: 0px 20px 0px 20px;
+  color: black;
 }
 
 #linkSub {
@@ -771,6 +794,7 @@ form {
   font-size: 15px;
   cursor: pointer;
   transition: all ease 0.3s;
+  margin-bottom: 10px;
 }
 
 #payBtn:hover {
@@ -878,3 +902,23 @@ li:hover {
   transition: all 0.3s ease;
 }
 
+
+#productlist-page > h2 {
+  border-radius: 50%;
+  height: 80px;
+  text-align: center;
+  width: 80px;
+  display: flex;
+  color: white;
+  font-size: 50px;
+  margin-left: 20px;
+  justify-content: center;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+
+#productlist-page > h2:hover {
+  background-color: white;
+  color: black;
+  transition: all ease 0.3s;
+}
