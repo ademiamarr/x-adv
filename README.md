@@ -93,3 +93,56 @@ If you've previously deployed and want to update the live site, just re-run `npm
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Serving the app with Node.js / Express (local or Node host)
+
+If you'd prefer to serve the built site with a small Node.js server (useful for testing or deploying to a Node-capable host like Heroku, Render, or a VPS), this repo includes a simple Express server (`server.js`).
+
+How it works:
+
+- The `server.js` file serves the static files from the `build` folder and falls back to `index.html` for client-side routing.
+
+Quick local steps (Windows PowerShell):
+
+```powershell
+npm ci
+npm run build
+npm run serve:prod
+```
+
+- `serve:prod` will run `npm run build` and then start the server with `node server.js`.
+- The server listens on the `PORT` environment variable or defaults to `3000`.
+
+Deploying to a Node host (high level):
+
+1. Push all code (or build on the host).
+2. Ensure the host runs `node server.js` or the `start-server` script. The host will provide `PORT`.
+
+If you want, I can add a Procfile for Heroku or a Dockerfile to containerize the app.
+I added a `Dockerfile` and `.dockerignore` so you can build a container that serves the production build using the included `server.js` Express app.
+
+### Docker (build and run locally)
+
+Build the container locally (from repo root):
+
+```powershell
+docker build -t x-adv:latest .
+```
+
+Run it, exposing port 3000:
+
+```powershell
+docker run -p 3000:3000 x-adv:latest
+```
+
+The container uses `node server.js` and will serve the production `build` files.
+
+### Heroku (quick notes)
+
+If you want to deploy to Heroku (or similar PaaS) you can add a `Procfile` with:
+
+```
+web: node server.js
+```
+
+Then push to a Heroku app (Heroku will run `npm ci` and `npm run build` by default if you set the environment to buildpacks).
