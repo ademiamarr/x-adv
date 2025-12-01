@@ -3,7 +3,6 @@ import LocationImg from '../assetss/loc.png';
 import { LiaAwardSolid } from "react-icons/lia";
 import { PiUsers } from "react-icons/pi";
 import { BsShop } from "react-icons/bs";
-import Stars from '../assetss/starts.jpg';
 
 function Location() {
 
