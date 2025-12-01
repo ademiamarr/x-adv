@@ -2,8 +2,8 @@ node_modules
 build
 npm-debug.log
 .env
-/.git
-/.github
+.git
+.github
 Dockerfile
 README.md
-*.local
+.local
