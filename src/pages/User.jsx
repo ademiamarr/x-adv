@@ -23,7 +23,7 @@ function user() {
                     <button className='socialBtn' id='appleBtn'><img src={Apple} alt='Apple' /></button>
                 </div>
                 <br />
-                <p>Don't have account?&nbsp; <strong style={{cursor: 'pointer'}}>Create Now</strong></p>
+                <p>Don't have account?<strong style={{cursor: 'pointer'}}>Create Now</strong></p>
                 </div>
             </div>       
         </div>

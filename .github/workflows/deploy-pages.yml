@@ -1,5 +1,11 @@
 name: Deploy site to GitHub Pages
 
+# Explicit permissions are required for the Pages deploy action to work reliably.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 on:
   push:
     branches: [ main ]
