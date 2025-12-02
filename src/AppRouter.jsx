@@ -5,9 +5,11 @@ import ProductListPage from './pages/ProductListPage';
 import CartPage from './pages/CartPage';
 import User from './pages/User';
 import Location from './pages/Location';
+import { BrowserRouter } from 'react-router-dom';
 
 const AppRouter = () => {
   return (
+    <BrowserRouter basename="/x-adv">
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -17,6 +19,7 @@ const AppRouter = () => {
         <Route path="/cart" element={<CartPage />} />
       </Routes>
     </Router>
+    </BrowserRouter>
   );
 };
 
