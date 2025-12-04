@@ -26,6 +26,8 @@ body {
 .navAdv {
   position: center;
   border-radius: 15px;
+  width: 70%;
+  height: auto;
 }
 
 #goShop {
