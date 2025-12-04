@@ -24,10 +24,10 @@ body {
 }
 
 .navAdv {
-  position: center;
+  margin: 40px auto;
   border-radius: 15px;
-  width: 70%;
-  height: auto;
+  width: 90%;
+  height: 85vh;
 }
 
 #goShop {
