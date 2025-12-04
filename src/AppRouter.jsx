@@ -1,23 +1,24 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import HomePage from './pages/HomePage';
-import ProductListPage from './pages/ProductListPage';
-import CartPage from './pages/CartPage';
-import User from './pages/User';
-import Location from './pages/Location';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-const AppRouter = () => {
+import HomePage from "./pages/HomePage";
+import ProductsPage from "./pages/ProductListPage";
+import CartPage from "./pages/CartPage";
+import UserPage from "./pages/User";
+import LocationPage from "./pages/Location";
+
+function App() {
   return (
     <BrowserRouter basename="/x-adv">
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/products" element={<ProductListPage />} />
-        <Route path="/location" element={<Location />} />
-        <Route path="/user" element={<User />} />
+        <Route path="/products" element={<ProductsPage />} />
         <Route path="/cart" element={<CartPage />} />
+        <Route path="/user" element={<UserPage />} />
+        <Route path="/location" element={<LocationPage />} />
       </Routes>
     </BrowserRouter>
   );
-};
+}
 
-export default AppRouter;
+export default App;

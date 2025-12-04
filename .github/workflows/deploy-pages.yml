@@ -1,6 +1,5 @@
 name: Deploy site to GitHub Pages
 
-# Explicit permissions are required for the Pages deploy action to work reliably.
 permissions:
   contents: read
   pages: write
@@ -33,7 +32,6 @@ jobs:
         run: npm run build
 
       - name: Upload production-ready build files
-        # use the latest stable version of the uploader which uses the updated upload-artifact action
         uses: actions/upload-pages-artifact@v4
         with:
           path: ./build
